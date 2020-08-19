@@ -2,11 +2,11 @@
 // Licensed under the MIT License.
 
 // The accessor names for the conversation flow, data and user profile state property accessors.
-const CONVERSATION_FLOW_PROPERTY = 'CONVERSATION_FLOW_PROPERTY';
+// const CONVERSATION_FLOW_PROPERTY = 'CONVERSATION_FLOW_PROPERTY';
 const CONVERSATION_DATA_PROPERTY = 'conversationData';
 const USER_PROFILE_PROPERTY = 'USER_PROFILE_PROPERTY';
 
-const { ActivityHandler, MessageFactory, ActivityTypes } = require('botbuilder');
+const { ActivityHandler, MessageFactory } = require('botbuilder');
 
 class EchoBot extends ActivityHandler {
     constructor(conversationState, userState) {
@@ -77,7 +77,7 @@ class EchoBot extends ActivityHandler {
     }
 
     /**
-     *  Override the ActivityHandler.run() method to save state changes after the bot logic completes. 
+     *  Override the ActivityHandler.run() method to save state changes after the bot logic completes.
     */
     async run(context) {
         await super.run(context);
